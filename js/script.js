@@ -55,7 +55,7 @@ arr.map((item, index) => {
 
 //счетчик верных ответов
 
-const question= document.getElementById('question');
+const question = document.getElementById('question');
 
 function buildQuiz(score){
   question.innerHTML = 'Правильных ответов  ' + score

@@ -28,6 +28,7 @@ let question4 = {
   correctAnswer: 'B'
 }
 question4.answer=['A:Сатурн','B:Луна','C:Венера'];
+
 //созд массива из объектов(вопросов)
 const arr=[];
 arr.push(question1,question2,question3,question4);
@@ -41,15 +42,24 @@ arr.forEach((item) => {
 
 //алгоритм для сравнения ответов польз с правильными
 let yourAnswers=['A','B','C','B'];
+let score =0;
 
 arr.map((item, index) => {
   if (item.correctAnswer===yourAnswers[index]) {
     console.log(yourAnswers[index], '- Правильно');
+    score++;
   } else {
     console.log(yourAnswers[index], '- Неправильно');
   }
 })
 
+//счетчик верных ответов
 
+const question= document.getElementById('question');
 
+function buildQuiz(score){
+  question.innerHTML = 'Правильных ответов  ' + score
+  question.style.color = 'red'
+}
+buildQuiz(score)
 
